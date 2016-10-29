@@ -74,7 +74,7 @@ class Interact:
         """ Creates shelf to plot a dimension (includes buttons
         for data column, encoding, data type, function)"""
         cols = self.columns
-        types = ['auto', 'Q', 'O', 'N']
+        types = {'Auto-detect': 'auto', 'Quantitative': 'Q', 'Ordinal': 'O', 'Nominal': 'N'}
         encodings = ['x', 'y', 'color', 'text', 'shape', 'size', 'row',
                      'column']
         functions = [None, 'mean', 'min', 'max', 'median', 'average', 'sum',
@@ -82,7 +82,7 @@ class Interact:
                      'argmin', 'argmax']
 
         data = widgets.Dropdown(options=cols, description='data')
-        type_ = widgets.Dropdown(options=types, description='data_type')
+        type_ = widgets.Dropdown(options=types, description='data_type', value='auto')
         encoding = widgets.Dropdown(options=encodings, description='encoding',
                                     value=encodings[i])
         fns = widgets.Dropdown(options=functions, description='function')
