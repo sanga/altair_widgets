@@ -74,7 +74,8 @@ class Interact:
         """ Creates shelf to plot a dimension (includes buttons
         for data column, encoding, data type, function)"""
         cols = self.columns
-        types = {'Auto-detect': 'auto', 'Quantitative': 'Q', 'Ordinal': 'O', 'Nominal': 'N'}
+        types = {'Auto-detect': 'auto', 'Quantitative': 'Q', 'Ordinal': 'O', 'Nominal': 'N',
+                 'Temporal': 'T'}
         encodings = ['x', 'y', 'color', 'text', 'shape', 'size', 'row',
                      'column']
         functions = [None, 'mean', 'min', 'max', 'median', 'average', 'sum',
